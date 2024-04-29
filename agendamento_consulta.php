@@ -20,6 +20,7 @@
         <table class="table">
             <thead>
                 <tr>
+                    <th scope="col">ID</th>
                     <th scope="col">Código</th>
                     <th scope="col">Nota Fiscal</th>
                     <th scope="col">Carga</th>
@@ -50,6 +51,7 @@
                     while($user_data = mysqli_fetch_assoc($result)) {
                         echo "<tr>";
                         echo "<td>" . $user_data['id'] . "</td>";
+                        echo "<td>" . $user_data['codigo'] . "</td>";
                         echo "<td>" . $user_data['notafiscal'] . "</td>";
                         echo "<td>" . $user_data['carga'] . "</td>";
                         echo "<td>" . $user_data['qtd_itens'] . "</td>";
