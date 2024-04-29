@@ -1,3 +1,123 @@
 <?php
     include('protect.php');
+
+    $strcon = mysqli_connect ("localhost", "root", "", "sai") or die ("Erro ao se conectar com o banco");
+
+    if(!empty($_GET['id'])){
+
+        $id = $_GET['id'];
+
+        $sqlSelect = "SELECT * FROM agendamento WHERE id=$id";
+
+        $result = $strcon->query($sqlSelect);
+
+        if($result->num_rows > 0){
+
+            while($user_data = mysqli_fetch_assoc($result)){
+                $codigo = $user_data ['codigo'];
+                $notafiscal = $user_data ['notafiscal'];
+                $carga = $user_data ['carga'];
+                $qtd_itens = $user_data ['qtd_itens'];
+                $peso = $user_data ['peso'];
+                $qtd_pallet = $user_data ['qtd_pallet'];
+                $veiculo = $user_data ['veiculo'];
+                $placa = $user_data ['placa'];
+                $motorista = $user_data ['motorista'];
+
+                $fornecedor = $user_data ['fornecedor'];
+                $cnpj_for = $user_data ['cnpj_for'];
+
+                $cliente = $user_data ['cliente'];
+                $cidade_ent = $user_data ['cidade_ent'];
+                $estado_ent = $user_data ['estado_ent'];
+                $bairro_ent = $user_data ['bairro_ent'];
+                $rua_ent = $user_data ['rua_ent'];
+                $numero_ent = $user_data ['numero_ent'];
+                $cep_ent = $user_data ['cep_ent'];
+
+                $hr_coleta = $user_data ['hr_coleta'];
+                $hr_entrega = $user_data ['hr_entrega'];
+
+            }
+            
+
+        } else {
+            header('Location: painel.php');
+        }
+
+    }
+    
 ?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Agendamento</title>
+</head>
+<body>
+    <h1>Formulário de Agendamento</h1>
+    <form name="agendamento" id="agendamento" onsubmit="return validarFormulario()" action="agendamento_save_edit.php" method="POST">
+        <label>Código: </label>
+        <input type="text" name="codigo" value="<?php echo $codigo ?>" required><br>
+
+        <label>Nota Fiscal: </label>
+        <input type="text" name="notafiscal" value="<?php echo $notafiscal ?>" required><br>
+
+        <label>Carga: </label>
+        <input type="text" name="carga" value="<?php echo $carga ?>" required>
+        <label>Quantia de Itens: </label>
+        <input type="number" name="qtd_itens" value="<?php echo $qtd_itens ?>" required>
+        <label>Peso: </label>
+        <input type="number" name="peso" value="<?php echo $peso ?>" required>
+        <label>Quantidade de Pallets: </label>
+        <input type="number" name="qtd_pallet" value="<?php echo $qtd_pallet ?>" required><br>
+
+        <label>Veículo: </label>
+        <select name="veiculo" value="<?php echo $veiculo ?>" required>
+            <option value="carreta">Carreta</option>
+            <option value="truck">Truck</option>
+            <option value="toco">Toco</option>
+        </select>
+        <label>Placa: </label>
+        <input type="text" name="placa" value="<?php echo $placa ?>" required><br>
+
+        <label>Motorista: </label>
+        <input type="text" name="motorista" value="<?php echo $motorista ?>" required><br>
+
+        <p>Endereço da Coleta</p>
+        <label>Fornecedor: </label>
+        <input type="text" name="fornecedor" value="<?php echo $fornecedor ?>" required><br>
+        <label>CNPJ: </label>
+        <input type="text" name="cnpj_for" value="<?php echo $cnpj_for ?>" required>
+
+        <p>Endereço da Entrega</p>
+        <label>Cliente: </label>
+        <input type="text" name="cliente" value="<?php echo $cliente ?>" required><br>
+        <label>Cidade: </label>
+        <input type="text" name="cidade_ent" value="<?php echo $cidade_ent ?>" required>
+        <label>Estado: </label>
+        <input type="text" name="estado_ent" value="<?php echo $estado_ent ?>" required><br>
+        <label>Bairro: </label>
+        <input type="text" name="bairro_ent" value="<?php echo $bairro_ent ?>" required><br>
+        <label>Rua: </label>
+        <input type="text" name="rua_ent" value="<?php echo $rua_ent ?>" required><br>
+        <label>Nº: </label>
+        <input type="text" name="numero_ent" value="<?php echo $numero_ent ?>" required><br>
+        <label>CEP: </label>
+        <input type="text" name="cep_ent" value="<?php echo $cep_ent ?>" required><br><br>
+
+        <label>Horário de Coleta: </label>
+        <input type="datetime-local" name="hr_coleta" value="<?php echo $hr_coleta ?>" required><br>
+
+        <label>Horário de Entrega: </label>
+        <input type="datetime-local" name="hr_entrega" value="<?php echo $hr_entrega ?>" required><br><br>
+
+        <input type="hidden" name="id" value="<?php echo $id ?>">
+        <input type="submit" name="update" value="Salvar">
+        <button><a href="agendamento_consulta.php">Cancelar</a></button>
+    </form>
+
+</body>
+</html>

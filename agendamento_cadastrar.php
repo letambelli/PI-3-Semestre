@@ -1,7 +1,5 @@
 <?php
     include('protect.php');
-
-    //22 colunas
     
     $codigo = $_POST ['codigo'];
     $notafiscal = $_POST ['notafiscal'];
