@@ -72,7 +72,7 @@
                         echo "<td>" . $user_data['hr_coleta'] . "</td>";
                         echo "<td>" . $user_data['hr_entrega'] . "</td>";
                         echo "<td><button><a href=\"agendamento_edit.php?id=$user_data[id]\">Alterar</a></button></td>";
-                        echo "<td><button><a href=\"\">Excluir</a></button></td>";
+                        echo "<td><button><a href=\"agendamento_excluir.php?id=$user_data[id]\">Excluir</a></button></td>";
                         
                     }
                 ?>
