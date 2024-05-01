@@ -11,7 +11,7 @@
 <body>
     <p>Bem Vindo(a), <?php echo $_SESSION['nome'];?>!</p>
     <button><a href="agendamento_consulta.php">Consultar Agendamentos</a></button>
-    <button><a href="config_parceiro.php">Configurações</a></button>
+    <button><a href="config_parceiro.php">Meus Dados</a></button>
     <button><a href="logout.php">Sair</a></button>
 
 </body>
