@@ -4,6 +4,6 @@
     }
 
     if(!isset($_SESSION['id'])) {
-        die("Você não pode acessar esta página porque não está logado. <br><button><a href=\"login.php\">Entrar</a></button>");
+        die("Você não pode acessar esta página porque não está logado. <br><button><a href=\"index.php\">Entrar</a></button>");
     }
 ?>
