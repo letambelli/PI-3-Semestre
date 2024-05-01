@@ -9,8 +9,8 @@
     <form action="" method="POST">
 
     <p>
-        <label>Usuário:</label>
-        <input type="text" id="id" name="id">
+        <label>Email:</label>
+        <input type="text" id="email" name="email">
     </p>
 
     <p>
@@ -18,22 +18,23 @@
         <input type="password" id="senha" name="senha">
     </p>
 
+    <button><a href="login_escolher.php">Voltar</a></button>
     <button type="submit">Entrar</button>
     
     <?php
 
         $strcon = mysqli_connect ("localhost", "root", "", "sai") or die ("Erro ao se conectar com o banco");
 
-        if(isset($_POST['id']) || isset($_POST['senha'])){
-            if(strlen($_POST['id']) == 0) {
-                echo "Preencha seu usuário";
+        if(isset($_POST['email']) || isset($_POST['senha'])){
+            if(strlen($_POST['email']) == 0) {
+                echo "Preencha seu email";
             } else if(strlen($_POST['senha']) == 0) {
                 echo "Preencha sua senha";
             } else {
-                $id = $strcon->real_escape_string($_POST['id']);
+                $email = $strcon->real_escape_string($_POST['email']);
                 $senha = $strcon->real_escape_string($_POST['senha']);
 
-                $sql_code = "SELECT * FROM usuario WHERE id = '$id' AND senha = '$senha'";
+                $sql_code = "SELECT * FROM parceiros WHERE email = '$email' AND senha = '$senha'";
                 $sql_query = $strcon->query($sql_code) or die("Falha na execução do código SQL: " . $strcon->error);
 
                 $quantidade = $sql_query->num_rows;
@@ -48,7 +49,7 @@
                     $_SESSION['id'] = $usuario['id'];
                     $_SESSION['nome'] = $usuario['nome'];
 
-                    header("Location: painel.php");
+                    header("Location: painel_parc.php");
 
                 } else {
                     echo "Falha ao logar! E-mail ou senha incorretos";
@@ -57,7 +58,6 @@
         }
 
         ?>
-        <a href="usuario.php">Cadastrar</a>
     </form>
 
     

@@ -5,5 +5,5 @@
 
     session_destroy();
 
-    header("Location: login.php");
+    header("Location: login_escolher.php");
 ?>
