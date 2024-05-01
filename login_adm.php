@@ -20,7 +20,7 @@
             <input type="password" id="senha" name="senha">
         </p>
 
-        <button><a href="login_escolher.php">Voltar</a></button>
+        <button><a href="index.php">Voltar</a></button>
         <button type="submit" value="continue">Entrar</button><br><br>
 
         <?php
