@@ -12,7 +12,7 @@
     <p>Bem Vindo(a), <?php echo $_SESSION['nome'];?>!</p>
     <button><a href="agendamento_consulta.php">Consultar Agendamentos</a></button>
     <button><a href="agendamento.php">Realizar Agendamento</a></button>
-    <button><a href="configuracao.php">Configurações</a></button>
+    <button><a href="config_adm.php">Configurações</a></button>
     <button><a href="logout.php">Sair</a></button>
 
 </body>

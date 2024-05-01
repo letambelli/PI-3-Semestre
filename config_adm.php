@@ -1,0 +1,16 @@
+<?php
+    include('protect.php');
+?>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações ADM</title>
+</head>
+<body>
+    <button><a href="#">Meu Cadastro</a></button>
+    <button><a href="parceiro.php">Cadastrar Parceiro</a></button>
+    <button><a href="adm.php">Cadastrar ADM</a></button>
+    <button><a href="painel.php">Voltar</a></button>
+</body>
+</html>
