@@ -8,7 +8,6 @@
     <title>Configurações Parceiro</title>
 </head>
 <body>
-    <button><a href="#">Meu Cadastro</a></button>
     <button><a href="painel.php">Voltar</a></button>
 </body>
 </html>
