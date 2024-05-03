@@ -34,8 +34,11 @@
                 
                 <input type="password" id="senha" name="senha" placeholder="Senha"required>
             </div>
-            <button type="button"><a href="config_adm.php">Cancelar</a></button>
-            <button type="submit">Enviar</button>
+
+            <div class="button-container">
+                <button type="button"><a href="config_adm.php">Cancelar</a></button>
+                <button type="submit">Enviar</button>
+            </div>
         </form>
     </div>
 </body>

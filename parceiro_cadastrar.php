@@ -14,15 +14,17 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="parceiro_cadastrar.css">
+    <title>cadastrado</title>
 </head>
 <body>
-    <p>Parceiro cadastrado com sucesso!</p>
-    <button><a href="config_adm.php">Voltar para Configurações</a></button>
-    
+    <div class="container">
+        <p>Parceiro cadastrado com sucesso!</p>
+        <button><a href="config_adm.php">Voltar para Configurações</a></button>
+    </div>
 </body>
-</html>
+</html
