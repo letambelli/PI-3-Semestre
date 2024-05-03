@@ -22,7 +22,7 @@
 </head>
 <body>
     <p>Parceiro cadastrado com sucesso!</p>
-    <button><a href="config_adm.php">Voltar para o Login</a></button>
+    <button><a href="config_adm.php">Voltar para Configurações</a></button>
     
 </body>
 </html>

@@ -7,7 +7,7 @@
     $senha = $_POST['senha'];
 
     $strcon = mysqli_connect ("localhost", "root", "", "sai") or die ("Erro ao se conectar com o banco");
-    $sql = "INSERT INTO usuario (nome, email, telefone, senha) VALUES ('".$nome."', '".$email."', '".$telefone."', '".$senha."');";
+    $sql = "INSERT INTO adm (nome, email, telefone, senha) VALUES ('".$nome."', '".$email."', '".$telefone."', '".$senha."');";
     mysqli_query ($strcon, $sql) or die ('Erro ao tentar cadastrar registro');
 
     $id_usuario = mysqli_insert_id($strcon);
@@ -23,7 +23,7 @@
     <title>Document</title>
 </head>
 <body>
-    <button><a href="login.php">Voltar para o Login</a></button>
+    <button><a href="painel.php">Voltar para o Painel</a></button>
     
 </body>
 </html>
