@@ -60,6 +60,7 @@ body {
     border-radius: 4px;
     background-color: #FF6347;
     color: #ffffff;
+    display: inline-block;
     cursor: pointer;
   }
   
