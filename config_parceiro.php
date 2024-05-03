@@ -8,6 +8,6 @@
     <title>Configurações Parceiro</title>
 </head>
 <body>
-    <button><a href="painel.php">Voltar</a></button>
+    <button><a href="painel_parc.php">Voltar</a></button>
 </body>
 </html>

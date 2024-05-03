@@ -3,33 +3,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="login_adm.css">
 </head>
 <body>
-    <h1>Acesse sua conta</h1>
-    <form action="" method="POST">
+    <div class="login-container">
+        <h1>Acesse sua conta</h1>
+        <form action=""  method="POST">
 
-    <p>
-        <label>Email:</label>
-        <input type="text" id="email" name="email">
-    </p>
+        <p>
+            <label>Email:</label>
+            <input type="text" id="email" name="email">
+        </p>
 
-    <p>
-        <label>Senha:</label>
-        <input type="password" id="senha" name="senha">
-    </p>
+        <p>
+            <label>Senha:</label>
+            <input type="password" id="senha" name="senha">
+        </p>
 
-    <button><a href="index.php">Voltar</a></button>
-    <button type="submit">Entrar</button>
-    
-    <?php
+        <div class="button-container">
+            <button type="button"><a href="index.php">Voltar</a></button>
+            <button type="submit" value="continue">Entrar</button><br><br>
+        </div>
+
+        <?php
 
         $strcon = mysqli_connect ("localhost", "root", "", "sai") or die ("Erro ao se conectar com o banco");
 
         if(isset($_POST['email']) || isset($_POST['senha'])){
             if(strlen($_POST['email']) == 0) {
-                echo "Preencha seu email";
+                echo "Preencha seu código de email!";
             } else if(strlen($_POST['senha']) == 0) {
-                echo "Preencha sua senha";
+                echo "Preencha sua senha!";
             } else {
                 $email = $strcon->real_escape_string($_POST['email']);
                 $senha = $strcon->real_escape_string($_POST['senha']);
@@ -52,13 +56,17 @@
                     header("Location: painel_parc.php");
 
                 } else {
-                    echo "Falha ao logar! E-mail ou senha incorretos";
+                    echo "Falha ao logar! Código de Usuário ou senha incorretos";
                 }
             }
         }
 
         ?>
-    </form>
+        </form>
+    </div>
+    
+    
+    
 
     
 

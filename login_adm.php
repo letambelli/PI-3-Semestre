@@ -20,8 +20,10 @@
             <input type="password" id="senha" name="senha">
         </p>
 
-        <button><a href="index.php">Voltar</a></button>
-        <button type="submit" value="continue">Entrar</button><br><br>
+        <div class="button-container">
+            <button type="button"><a href="index.php">Voltar</a></button>
+            <button type="submit" value="continue">Entrar</button><br><br>
+        </div>
 
         <?php
 
@@ -60,10 +62,11 @@
         }
 
         ?>
+        </form>
     </div>
     
     
-    </form>
+    
 
     
 
