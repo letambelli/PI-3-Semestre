@@ -55,68 +55,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alterar Agendamento</title>
+    <link rel="stylesheet" href="agendamento_edit.css">
 </head>
 <body>
-    <h1>Formulário de Agendamento</h1>
-    <form name="agendamento" id="agendamento" onsubmit="return validarFormulario()" action="agendamento_save_edit.php" method="POST">
-        <label>Código: </label>
+    <form name="agendamento" id="agendamento" onsubmit="return validarFormulario()" action="agendamento_save_edit.php" method="POST">   
+        <h1>Formulário de Agendamento</h1>
+        <label class="label">Código: </label>
         <input type="text" name="codigo" value="<?php echo $codigo ?>" required><br>
 
-        <label>Nota Fiscal: </label>
+        <label class="label">Nota Fiscal: </label>
         <input type="text" name="notafiscal" value="<?php echo $notafiscal ?>" required><br>
 
-        <label>Carga: </label>
+        <label class="label">Carga: </label>
         <input type="text" name="carga" value="<?php echo $carga ?>" required>
-        <label>Quantia de Itens: </label>
+        <label class="label">Quantia de Itens: </label>
         <input type="number" name="qtd_itens" value="<?php echo $qtd_itens ?>" required>
-        <label>Peso: </label>
+        <label class="label">Peso: </label>
         <input type="number" name="peso" value="<?php echo $peso ?>" required>
-        <label>Quantidade de Pallets: </label>
+        <label class="label">Quantidade de Pallets: </label>
         <input type="number" name="qtd_pallet" value="<?php echo $qtd_pallet ?>" required><br>
 
-        <label>Veículo: </label>
+        <label class="label">Veículo: </label>
         <select name="veiculo" value="<?php echo $veiculo ?>" required>
             <option value="carreta">Carreta</option>
             <option value="truck">Truck</option>
             <option value="toco">Toco</option>
         </select>
-        <label>Placa: </label>
+        <label class="label">Placa: </label>
         <input type="text" name="placa" value="<?php echo $placa ?>" required><br>
 
-        <label>Motorista: </label>
+        <label class="label">Motorista: </label>
         <input type="text" name="motorista" value="<?php echo $motorista ?>" required><br>
 
         <p>Endereço da Coleta</p>
-        <label>Fornecedor: </label>
+        <label class="label">Fornecedor: </label>
         <input type="text" name="fornecedor" value="<?php echo $fornecedor ?>" required><br>
-        <label>CNPJ: </label>
+        <label class="label">CNPJ: </label>
         <input type="text" name="cnpj_for" value="<?php echo $cnpj_for ?>" required>
 
         <p>Endereço da Entrega</p>
-        <label>Cliente: </label>
+        <label class="label">Cliente: </label>
         <input type="text" name="cliente" value="<?php echo $cliente ?>" required><br>
-        <label>Cidade: </label>
+        <label class="label">Cidade: </label>
         <input type="text" name="cidade_ent" value="<?php echo $cidade_ent ?>" required>
-        <label>Estado: </label>
+        <label class="label">Estado: </label>
         <input type="text" name="estado_ent" value="<?php echo $estado_ent ?>" required><br>
-        <label>Bairro: </label>
+        <label class="label">Bairro: </label>
         <input type="text" name="bairro_ent" value="<?php echo $bairro_ent ?>" required><br>
-        <label>Rua: </label>
+        <label class="label">Rua: </label>
         <input type="text" name="rua_ent" value="<?php echo $rua_ent ?>" required><br>
-        <label>Nº: </label>
+        <label class="label">Nº: </label>
         <input type="text" name="numero_ent" value="<?php echo $numero_ent ?>" required><br>
-        <label>CEP: </label>
+        <label class="label">CEP: </label>
         <input type="text" name="cep_ent" value="<?php echo $cep_ent ?>" required><br><br>
-
-        <label>Horário de Coleta: </label>
-        <input type="datetime-local" name="hr_coleta" value="<?php echo $hr_coleta ?>" required><br>
-
-        <label>Horário de Entrega: </label>
-        <input type="datetime-local" name="hr_entrega" value="<?php echo $hr_entrega ?>" required><br><br>
-
-        <input type="hidden" name="id" value="<?php echo $id ?>">
-        <input type="submit" name="update" value="Salvar">
-        <button><a href="agendamento_consulta.php">Cancelar</a></button>
+        
+        <div class="horarios">
+            <div>
+                <label class="label">Horário de Coleta: </label>
+                <input type="datetime-local" name="hr_coleta" id="hr_col" value="<?php echo $hr_coleta ?>" required>
+            </div>
+            
+            <div>
+                <label class="label">Horário de Entrega: </label>
+                <input type="datetime-local" name="hr_entrega" id="hr_entr" value="<?php echo $hr_entrega ?>" required>
+            </div>
+        </div>
+        
+        <div class="button-container">
+            <button class="cancelar"><a href="agendamento_consulta.php">Cancelar</a></button>
+            <input type="hidden" name="id" value="<?php echo $id ?>">
+            <input type="submit" name="update" value="Salvar">
+        </div>
     </form>
 
 </body>
