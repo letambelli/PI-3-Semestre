@@ -12,27 +12,33 @@
         <form action="parceiro_cadastrar.php" method="POST">
             <div class="form-group">
                 
-                <input type="text" id="nome_empresa" name="nome_empresa" placeholder="Nome da empresa"required>
+                <label>Nome da Empresa:</label>
+                <input type="text" id="nome_empresa" name="nome_empresa" required>
             </div>
             <div class="form-group">
 
-                <input type="text" id="cnpj" name="cnpj" placeholder="CNPJ da empresa"required>
+                <label>CNPJ da Empresa:</label>
+                <input type="text" id="cnpj" name="cnpj" required>
             </div>
             <div class="form-group">
                
-                <input type="text" id="nome" name="nome" placeholder="Nome completo"required>
-            </div>
-            <div class="form-group">
-        
-                <input type="email" id="email" name="email" placeholder="Email"required>
+                <label>Nome:</label>
+                <input type="text" id="nome" name="nome" required>
             </div>
             <div class="form-group">
 
-                <input type="tel" id="telefone" name="telefone" placeholder="Telefone"required>
+                <label>E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+
+                <label>Telefone</label>
+                <input type="tel" id="telefone" name="telefone" required>
             </div>
             <div class="form-group">
                 
-                <input type="password" id="senha" name="senha" placeholder="Senha"required>
+                <label>Senha:</label>
+                <input type="password" id="senha" name="senha" required>
             </div>
 
             <div class="button-container">

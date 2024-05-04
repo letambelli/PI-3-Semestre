@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="adm_cadastrar.css">
 </head>
 <body>
-    <button><a href="painel.php">Voltar para o Painel</a></button>
+    <button><a href="config_adm.php">Voltar para Configurações</a></button>
     
 </body>
 </html>
