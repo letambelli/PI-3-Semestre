@@ -1,0 +1,104 @@
+body {
+    background-color: rgb(33, 33, 126);
+    color: white;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+
+.voltar {
+    margin-right: 95%;
+    width: 5%;
+    padding: 10px 20px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.voltar:hover {
+    background-color: darkred;
+}
+
+.box-search {
+    display: flex;
+    justify-content: center;
+    gap: .1%;
+}
+
+.form-control {
+    border-radius: 8px;
+    width: 20%;
+    padding: 5px;
+}
+
+.pesquisa {
+    width: 5%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pesquisa:hover {
+    background-color: #0056b3;
+}
+
+.table {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-collapse: collapse;
+    overflow-x: auto;
+    border-radius: 10px;
+}
+
+.table {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-collapse: collapse;
+    overflow-x: auto;
+}
+
+.table th,
+.table td {
+    border: 1px solid #b8b8b8;
+    padding: 8px;
+    text-align: left;
+    border-radius: 10px;
+}
+
+.table th {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.alterar {
+    padding: 10px 20px;
+    background-color: blue;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.alterar:hover {
+    background-color: blue;
+}
+
+.excluir {
+    padding: 10px 20px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.excluir:hover {
+    background-color: darkred;
+}

@@ -14,8 +14,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultar Agendamento</title>
+    <link rel="stylesheet" href="agendamento_consulta.css">
 </head>
 <body>
+    <button class="voltar"><a href="painel.php">Voltar</a></button>   
+    <div class="box-search">
+        <input type="search" class="form-control" placeholder="Pesquisar" id="pesquisar">
+        <button class="pesquisa">Pesquisar</button>
+    </div>
+    <br>
     <div>
         <table class="table">
             <thead>
@@ -41,6 +48,7 @@
                     <th scope="col">CEP</th>
                     <th scope="col">Horário de Coleta</th>
                     <th scope="col">Horário de Entrega</th>
+                    <th scope="col"></th>
                     <th scope="col"></th>
                     
                     
@@ -71,15 +79,13 @@
                         echo "<td>" . $user_data['cep_ent'] . "</td>";
                         echo "<td>" . $user_data['hr_coleta'] . "</td>";
                         echo "<td>" . $user_data['hr_entrega'] . "</td>";
-                        echo "<td><button><a href=\"agendamento_edit.php?id=$user_data[id]\">Alterar</a></button></td>";
-                        echo "<td><button><a href=\"agendamento_excluir.php?id=$user_data[id]\">Excluir</a></button></td>";
+                        echo "<td><button class=\"alterar\"><a href=\"agendamento_edit.php?id=$user_data[id]\">Alterar</a></button></td>";
+                        echo "<td><button class=\"excluir\"><a href=\"agendamento_excluir.php?id=$user_data[id]\">Excluir</a></button></td>";
                         
                     }
                 ?>
             </tbody>
         </table>
     </div>
-
-    <button><a href="painel.php">Voltar</a></button>
 </body>
 </html>
