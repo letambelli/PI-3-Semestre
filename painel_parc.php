@@ -13,7 +13,7 @@
     <div class="painel-container">
         <h2>Bem Vindo(a), <?php echo $_SESSION['nome'];?>!</h2>
         <button><a href="#">Consultar Agendamentos</a></button>
-        <button><a href="config_parceiro.php">Meus Dados</a></button>
+        <button><a href="cadastro_parc.php">Meus Dados</a></button>
         <button class="sair"><a href="logout.php">Sair</a></button>
         </div>
 
