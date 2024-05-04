@@ -49,7 +49,7 @@
             </div>
 
             <div class="button-container">
-                <button type="button"><a href="config_adm.php">Cancelar</a></button>
+                <button type="button"><a href="config_adm.php">Voltar</a></button>
             </div>
         </form>
     </div>
