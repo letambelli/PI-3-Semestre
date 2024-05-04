@@ -22,8 +22,6 @@
     <link rel="stylesheet" href="agendamento_consulta.css">
 </head>
 <body>
-    <button class="voltar"><a href="painel.php">Voltar</a></button>   
-    
     <div class="box-search">
         <input type="search" class="form-control" placeholder="Pesquisar" id="pesquisar">
         <button class="pesquisa" onclick="searchData()">Pesquisar</button>
@@ -56,8 +54,7 @@
                     <th scope="col">Horário de Entrega</th>
                     <th scope="col"></th>
                     <th scope="col"></th>
-                    
-                    
+    
                 </tr>
             </thead>
             <tbody>
@@ -92,7 +89,8 @@
                 ?>
             </tbody>
         </table>
-    </div>
+        <button class="voltar"><a href="painel.php">Voltar</a></button>
+    </div> 
 </body>
     <script>
         var search = document.getElementById('pesquisar');

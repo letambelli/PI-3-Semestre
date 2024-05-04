@@ -12,7 +12,6 @@
 
     $id_usuario = mysqli_insert_id($strcon);
     $id_formatado = sprintf("%05d", $id_usuario);
-    echo "Usuário cadastrado com sucesso. O Código de usuário é para o login é: " . $id_formatado;
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +23,10 @@
     <link rel="stylesheet" href="adm_cadastrar.css">
 </head>
 <body>
-    <button><a href="config_adm.php">Voltar para Configurações</a></button>
+    <div class="container">
+        <p>Usuário cadastrado com sucesso. O Código de usuário é para o login é: <?php echo $id_formatado?></p>
+        <button><a href="config_adm.php">Voltar para Configurações</a></button>
+    </div>
     
 </body>
 </html>

@@ -15,25 +15,11 @@ a {
     color: rgb(255, 255, 255);
   }
 
-.voltar {
-    margin-right: 95%;
-    width: 5%;
-    padding: 10px 20px;
-    background-color: red;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.voltar:hover {
-    background-color: darkred;
-}
-
 .box-search {
     display: flex;
     justify-content: center;
     gap: .1%;
+    margin-top: 2%;
 }
 
 .form-control {
@@ -106,5 +92,20 @@ a {
 }
 
 .excluir:hover {
+    background-color: darkred;
+}
+
+.voltar {
+    margin-top: 10px;
+    width: 5%;
+    padding: 10px 20px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.voltar:hover {
     background-color: darkred;
 }

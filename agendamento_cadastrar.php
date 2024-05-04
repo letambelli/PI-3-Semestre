@@ -28,8 +28,21 @@
     $strcon = mysqli_connect ("localhost", "root", "", "sai") or die ("Erro ao se conectar com o banco");
     $sql = "INSERT INTO agendamento (codigo, notafiscal, carga, qtd_itens, peso, qtd_pallet, veiculo, placa, motorista, fornecedor, cnpj_for, cliente, cidade_ent, estado_ent, bairro_ent, rua_ent, numero_ent, cep_ent, hr_coleta, hr_entrega) VALUES ('".$codigo."' ,'".$notafiscal."' , '".$carga."' , '".$qtd_itens."' , '".$peso."' , '".$qtd_pallet."' , '".$veiculo."' , '".$placa."' , '".$motorista."' , '".$fornecedor."' ,  '".$cnpj_for."' ,'".$cliente."' , '".$cidade_ent."' ,  '".$estado_ent."' ,  '".$bairro_ent."' ,  '".$rua_ent."' ,  '".$numero_ent."' ,  '".$cep_ent."' ,'".$hr_coleta."' , '".$hr_entrega."');";
     mysqli_query ($strcon, $sql) or die ('Erro ao tentar cadastrar registro');
-        
-    echo "Agendamento feito com sucesso";
 ?>
 
-<a href="painel.php"><button>Voltar para o início</button></a>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento Realizado com Sucesso</title>
+    <link rel="stylesheet" href="agendamento_cadastrar.css">
+</head>
+<body>
+    <div class="container">
+    <p>Agendamento feito com sucesso!</p>
+    <a href="painel.php"><button>Voltar para o início</button></a>
+    </div>
+</body>
+</html>
+
+
