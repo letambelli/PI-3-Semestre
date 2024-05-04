@@ -56,7 +56,7 @@
                     header("Location: painel.php");
 
                 } else {
-                    echo "Falha ao logar! Código de Usuário ou senha incorretos";
+                    echo "<br>Falha ao logar! Código de Usuário ou senha incorretos";
                 }
             }
         }

@@ -1,7 +1,3 @@
-function limparFormulario() {
-    document.getElementById("agendamento").reset();
-}
-
 function validarFormulario() {
     var form = document.getElementById("agendamento");
     var inputs = form.querySelectorAll("input, select");

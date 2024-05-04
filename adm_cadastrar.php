@@ -20,7 +20,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastrar ADM</title>
+    <link rel="stylesheet" href="adm_cadastrar.css">
 </head>
 <body>
     <button><a href="painel.php">Voltar para o Painel</a></button>

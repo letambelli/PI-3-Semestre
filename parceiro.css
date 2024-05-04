@@ -73,6 +73,6 @@ button[type="button"]:hover {
     display: flex;
   }
   
-  .button-container button {
+.button-container button {
     margin-right: 10px;
   }
