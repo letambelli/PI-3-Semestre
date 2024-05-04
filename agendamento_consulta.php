@@ -3,8 +3,13 @@
     
     $strcon = mysqli_connect ("localhost", "root", "", "sai") or die ("Erro ao se conectar com o banco");
 
-    $sql = "SELECT * FROM agendamento ORDER BY id DESC";
-
+    if (!empty($_GET['search'])) {
+        $data = mysqli_real_escape_string($strcon, $_GET['search']);
+        $sql = "SELECT * FROM agendamento WHERE id LIKE '%$data%' or codigo LIKE '%$data%' or notafiscal LIKE '%$data%'or fornecedor LIKE '%$data%' or cliente LIKE '%$data%' or cnpj_for LIKE '%$data%' or motorista LIKE '%$data%' or cidade_ent LIKE '%$data%' ORDER BY id DESC";
+    } else {
+        $sql = "SELECT * FROM agendamento ORDER BY id DESC";
+    }
+    
     $result = $strcon->query($sql);
 
 ?>
@@ -18,9 +23,10 @@
 </head>
 <body>
     <button class="voltar"><a href="painel.php">Voltar</a></button>   
+    
     <div class="box-search">
         <input type="search" class="form-control" placeholder="Pesquisar" id="pesquisar">
-        <button class="pesquisa">Pesquisar</button>
+        <button class="pesquisa" onclick="searchData()">Pesquisar</button>
     </div>
     <br>
     <div>
@@ -88,4 +94,17 @@
         </table>
     </div>
 </body>
+    <script>
+        var search = document.getElementById('pesquisar');
+        
+        search.addEventListener("keydown", function(event) {
+            if (event.key == "Enter") {
+                searchData();
+            }
+        });
+        
+        function searchData() {
+            window.location = 'agendamento_consulta.php?search='+search.value;
+        }
+    </script>
 </html>
