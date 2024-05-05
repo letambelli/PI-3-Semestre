@@ -85,7 +85,5 @@
             <input type="submit" name="enviar" value="Enviar">
         </div>
     </form>
-
-    <script src="agendamento.js"></script>
 </body>
 </html>
