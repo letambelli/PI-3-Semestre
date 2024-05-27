@@ -10,10 +10,9 @@
     <div class="index-container">
         <h1>Faça Login</h1>
         <div class="button-container">
-        <button><a href="login_adm.php">ADM</a></button><br><br>
-        <button><a href="login_parc.php">Parceiro</a></button>
+            <button><a href="login_adm.php">ADM</a></button><br><br>
+            <button><a href="login_parc.php">Parceiro</a></button>
         </div>
     </div>
-    
 </body>
 </html>

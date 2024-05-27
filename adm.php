@@ -21,7 +21,7 @@
             </div>
             <div class="form-group">
 
-                <label>Telefone</label>
+                <label>Telefone:</label>
                 <input type="tel" id="telefone" name="telefone" required>
             </div>
             <div class="form-group">
