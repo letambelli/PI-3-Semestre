@@ -29,27 +29,28 @@
 </head>
 <body>
     <div class="container">
-        <h2>Meu Cadastro</h2>
+        <h1>Meus Dados</h1>
         <form action="" method="POST">
             <div class="form-group">
                 <label>Nome:</label>
-                <input type="text" id="nome" name="nome" value="<?php echo $row['nome']; ?>" required>
+                <input type="text" id="nome" name="nome" value="<?php echo $row['nome']; ?>" readonly>
             </div>
             <div class="form-group">
                 <label>E-mail:</label>
-                <input type="email" id="email" name="email" value="<?php echo $row['email']; ?>" required>
+                <input type="email" id="email" name="email" value="<?php echo $row['email']; ?>" readonly>
             </div>
             <div class="form-group">
                 <label>Telefone</label>
-                <input type="tel" id="telefone" name="telefone" value="<?php echo $row['telefone']; ?>" required>
+                <input type="tel" id="telefone" name="telefone" value="<?php echo $row['telefone']; ?>" readonly>
             </div>
             <div class="form-group">
                 <label>Senha:</label>
-                <input type="password" id="senha" name="senha" value="<?php echo $row['senha']; ?>" required>
+                <input type="password" id="senha" name="senha" value="<?php echo $row['senha']; ?>" readonly>
             </div>
 
             <div class="button-container">
                 <button type="button"><a href="config_adm.php">Voltar</a></button>
+                <?php echo "<button class=\"alterar\"><a href=\"editProprioCadastro.php?id=$_SESSION[id]\">Alterar Dados</a></button>"?>
             </div>
         </form>
     </div>
