@@ -24,41 +24,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meus Dados</title>
-    <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="cadastro_parc.css">
 </head>
 <body>
     <div class="container">
-        <h2>Meus Dados</h2>
+        <h1>Meus Dados</h1>
         <form action="" method="POST">
             <div class="form-group">
                 
                 <label>Nome da Empresa:</label>
-                <input type="text" id="nome_empresa" name="nome_empresa" value="<?php echo $row['nome_empresa']?>" required>
+                <input type="text" id="nome_empresa" name="nome_empresa" value="<?php echo $row['nome_empresa']?>" readonly>
             </div>
             <div class="form-group">
 
                 <label>CNPJ da Empresa:</label>
-                <input type="text" id="cnpj" name="cnpj" value="<?php echo $row ['cnpj']?>" required>
+                <input type="text" id="cnpj" name="cnpj" value="<?php echo $row ['cnpj']?>" readonly>
             </div>
             <div class="form-group">
                
                 <label>Nome:</label>
-                <input type="text" id="nome" name="nome" value='<?php echo $row ['nome']?>'required>
+                <input type="text" id="nome" name="nome" value='<?php echo $row ['nome']?>'readonly>
             </div>
             <div class="form-group">
 
                 <label>E-mail:</label>
-                <input type="email" id="email" name="email" value='<?php echo $row ['email']?>'required>
+                <input type="email" id="email" name="email" value='<?php echo $row ['email']?>'readonly>
             </div>
             <div class="form-group">
 
                 <label>Telefone</label>
-                <input type="tel" id="telefone" name="telefone" value='<?php echo $row ['telefone']?>'required>
+                <input type="tel" id="telefone" name="telefone" value='<?php echo $row ['telefone']?>'readonly>
             </div>
             <div class="form-group">
                 
                 <label>Senha:</label>
-                <input type="password" id="senha" name="senha" value='<?php echo $row ['senha']?>' required>
+                <input type="password" id="senha" name="senha" value='<?php echo $row ['senha']?>' readonly>
             </div>
 
             <div class="button-container">

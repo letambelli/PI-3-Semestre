@@ -31,9 +31,9 @@
 
         if(isset($_POST['id']) || isset($_POST['senha'])){
             if(strlen($_POST['id']) == 0) {
-                echo "Preencha seu código de usuário!";
+                echo "<br>Preencha seu código de usuário!";
             } else if(strlen($_POST['senha']) == 0) {
-                echo "Preencha sua senha!";
+                echo "<br>Preencha sua senha!";
             } else {
                 $id = $strcon->real_escape_string($_POST['id']);
                 $senha = $strcon->real_escape_string($_POST['senha']);

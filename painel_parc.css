@@ -1,67 +1,78 @@
 body {
-    background-image: linear-gradient(45deg, blue, purple);
-    font-family: Arial, sans-serif;
-    color: rgba(255, 255, 255, 0.8);
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .painel-container {
-    width: 100%; 
-    max-width: 600px; 
-    margin: 200px auto;
-    background-color: rgba(12, 12, 35, 0.8);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 50px;
-    text-align: center;
-    border-radius: 10px;
-  }
-  
-  h2 {
-    display: inline-block; 
-    margin: 0;
-    margin-bottom: 20px;
-    justify-content: center;
-  }
-  
-  a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 16px;
-  }
-  
-  button {
-    width: 80%;
-    margin-top: 20px;
-    padding: 10px;
-    background-color: rgb(80, 50, 213);
-    border: none;
-    border-radius: 15px;
-    transition: background-color 0.3s;
-  }
-  
-  button:hover {
-    background-color: lightgray;
-    cursor: pointer;
-  }
-  
-  button a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-  }
-  
-  button.sair {
-    background-color: red;
-    color: white;
-  }
-  
-  button.sair:hover{
-    background-color: darkred;
-    color: white;
-  }
-  
+  background-color: #f2f4f5;
+  font-family: Arial, sans-serif;
+  color: rgba(32, 32, 32, 0.8);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h2 {
+  color: rgba(32, 32, 32, 0.8);
+  margin-bottom: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.painel-container {
+  width: 100%; 
+  max-width: 600px; 
+  margin: 200px auto;
+  background-color: white;
+  border: 2px rgb(88, 88, 88);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px rgb(88, 88, 88);
+}
+
+h2 {
+  display: inline-block; 
+  margin: 0;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+}
+
+button {
+  width: 80%;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: rgb(36, 99, 193);
+  border: none;
+  border-radius: 15px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: darkblue;
+  cursor: pointer;
+}
+
+button a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+button.sair {
+  background-color: red;
+  color: white;
+}
+
+button.sair:hover{
+  background-color: darkred;
+  color: white;
+}

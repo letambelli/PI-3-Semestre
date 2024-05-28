@@ -39,8 +39,8 @@
 </head>
 <body>
     <div class="container">
-    <p>Agendamento feito com sucesso!</p>
-    <a href="painel.php"><button>Voltar para o início</button></a>
+        <p>Agendamento realizado com sucesso!</p>
+        <a href="painel.php"><button>Voltar para o início</button></a>
     </div>
 </body>
 </html>

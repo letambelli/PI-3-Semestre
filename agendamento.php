@@ -21,11 +21,12 @@
         <label class="label">Nota Fiscal: </label>
         <input type="text" name="notafiscal" required><br>
         
-        
+            <div>
             <label class="label">Carga: </label>
             <input type="text" name="carga" required>
             <label class="label">Quantia de Itens: </label>
             <input type="number" name="qtd_itens" required>
+            </div>
 
         <div class="carga">
             <label class="label">Peso: </label>
@@ -46,13 +47,13 @@
         <label class="label">Motorista: </label>
         <input type="text" name="motorista" required><br>
 
-        <p>Endereço da Coleta</p>
+        <h3>Coleta</h3>
         <label class="label">Fornecedor: </label>
         <input type="text" name="fornecedor" required><br>
         <label class="label">CNPJ: </label>
         <input type="text" name="cnpj_for" required>
 
-        <p>Endereço da Entrega</p>
+        <h3>Entrega</h3>
         <label class="label">Cliente: </label>
         <input type="text" name="cliente" required><br>
         <label class="label">Cidade: </label>
@@ -67,14 +68,15 @@
         <input type="text" name="numero_ent" required><br>
         <label class="label">CEP: </label>
         <input type="text" name="cep_ent" required><br><br>
-
+        
+        <h3>Horários</h3>
         <div class="horarios">
             <div>
-                <label class="label">Horário de Coleta: </label>
+                <label class="label">Coleta: </label>
                 <input type="datetime-local" name="hr_coleta" id="hr_col" required>
             </div>
             <div>
-                <label class="label">Horário de Entrega: </label>
+                <label class="label">Entrega: </label>
                 <input type="datetime-local" name="hr_entrega" id="hr_entr" required>
             </div>
         </div>

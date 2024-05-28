@@ -10,7 +10,18 @@ body {
     height: 100vh;
   }
   
-  .index-container {
+h1 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+  }
+  
+.index-container {
     background-color: white;
     border-radius: 8px;
     border: 2px rgb(88, 88, 88);
@@ -18,19 +29,8 @@ body {
     padding: 20px;
     width: 300px;
   }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 50px;
-  }
 
-  a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 18px;
-  }
-  
-  .index-container button{
+.index-container button{
     width: 100%;
     padding: 10px;
     border: none;
@@ -40,7 +40,7 @@ body {
     cursor: pointer;
   }
   
-  .index-container button:hover {
+.index-container button:hover {
     background-color: darkblue;
   }
   

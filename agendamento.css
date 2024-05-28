@@ -1,53 +1,43 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: linear-gradient(45deg, darkblue, blue);
+    background-color: #f2f4f5;
+    color: rgba(32, 32, 32, 0.8);
     margin: 0;
     padding: 0;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+
+label {
+    margin-left: 20px;
 }
 
 h1 {
-    text-align: center;
-    color: #d3d3da;
+    margin-left: 20px;
 }
 
-p {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    margin-top: 20px;
-  }
-
-  a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-  }
-
-.label {
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.8);
-
+h3 {
+    margin-left: 20px;
 }
 
 form {
-    max-width: 600px;
+    max-width: 1000px;
     margin: 20px auto;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: white;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-label {
-    display: block;
-    margin-bottom: 1%;
-    margin-top: 2%;
-    color: #000000;
 }
 
 input[type="text"],
 input[type="number"],
 select {
-    width: calc(100% - 10px);
+    width: 350px;
     margin-bottom: 10px;
     padding: 8px;
     border: 1px solid #ccc;
@@ -55,9 +45,33 @@ select {
     box-sizing: border-box;
 }
 
+#hr_col {
+    padding: 8px;
+    border-radius: 10px;
+    margin-bottom: 15%;
+}
+
+#hr_entr {
+    padding: 8px;
+    border-radius: 10px;
+    margin-bottom: 15%;
+
+}
+
+.horarios {
+    display: flex;
+    gap: 5%;
+}
+
+.button-container {
+    display: inline;
+    gap: 50px;
+    margin-left: 150px;
+  }
+
 input[type="submit"],
 button {
-    width: 32%;
+    width: 20%;
     padding: 10px 20px;
     margin-top: 10px;
     background-color: #007bff;
@@ -75,7 +89,7 @@ button:hover {
 
 .cancelar {
     margin-left: 2%;
-    width: 32%;
+    width: 20%;
     padding: 10px 20px;
     background-color: red;
     color: #fff;
@@ -89,7 +103,7 @@ button:hover {
 }
 
 input[type="reset"].limpar {
-    width: 32%;
+    width: 20%;
     padding: 10px 20px;
     background-color: rgb(199, 199, 36);
     color: #fff;
@@ -101,28 +115,3 @@ input[type="reset"].limpar {
 input[type="reset"].limpar:hover {
     background-color: darkgoldenrod;
 }
-
-#hr_col {
-    border: none;
-    padding: 8px;
-    border-radius: 10px;
-    outline: none;
-    margin-bottom: 15%;
-}
-
-#hr_entr {
-    border: none;
-    padding: 8px;
-    border-radius: 10px;
-    outline: none;
-    margin-bottom: 15%;
-
-}
-
-.horarios {
-    display: flex;
-    justify-content: center;
-    gap: 5%;
-}
-
-

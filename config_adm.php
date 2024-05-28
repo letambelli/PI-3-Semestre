@@ -11,6 +11,7 @@
 <body>
 
     <div class="config-container">
+        <h1>Configurações</h1>
         <button><a href="cadastro_adm.php">Meu Cadastro</a></button>
         <button><a href="escolhaEditar.php">Editar Cadastro</a></button>
         <button><a href="parceiro.php">Cadastrar Parceiro</a></button>

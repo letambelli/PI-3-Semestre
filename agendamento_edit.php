@@ -58,8 +58,10 @@
     <link rel="stylesheet" href="agendamento_edit.css">
 </head>
 <body>
-    <form name="agendamento" id="agendamento" onsubmit="return validarFormulario()" action="agendamento_save_edit.php" method="POST">   
-        <h1>Formulário de Agendamento</h1>
+    <form name="agendamento" id="agendamento" onsubmit="return validarFormulario()" action="agendamento_save_edit.php" method="POST">
+
+        <h1>Alterar Agendamento</h1>
+
         <label class="label">Código: </label>
         <input type="text" name="codigo" value="<?php echo $codigo ?>" required><br>
 
@@ -87,13 +89,13 @@
         <label class="label">Motorista: </label>
         <input type="text" name="motorista" value="<?php echo $motorista ?>" required><br>
 
-        <p>Endereço da Coleta</p>
+        <h3>Coleta</h3>
         <label class="label">Fornecedor: </label>
         <input type="text" name="fornecedor" value="<?php echo $fornecedor ?>" required><br>
         <label class="label">CNPJ: </label>
         <input type="text" name="cnpj_for" value="<?php echo $cnpj_for ?>" required>
 
-        <p>Endereço da Entrega</p>
+        <h3>Entrega</h3>
         <label class="label">Cliente: </label>
         <input type="text" name="cliente" value="<?php echo $cliente ?>" required><br>
         <label class="label">Cidade: </label>
@@ -109,6 +111,7 @@
         <label class="label">CEP: </label>
         <input type="text" name="cep_ent" value="<?php echo $cep_ent ?>" required><br><br>
         
+        <h3>Horários</h3>
         <div class="horarios">
             <div>
                 <label class="label">Horário de Coleta: </label>
