@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Parceiro</title>
     <link rel="stylesheet" href="adm.css">
+    <script src="format.js"></script>
 </head>
 <body>
     <div class="container">
@@ -22,7 +23,7 @@
             <div class="form-group">
 
                 <label>Telefone:</label>
-                <input type="tel" id="telefone" name="telefone" required>
+                <input type="tel" id="telefone" name="telefone" oninput="formatarTelefone(this)" required>
             </div>
             <div class="form-group">
                 

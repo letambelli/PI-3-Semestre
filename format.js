@@ -1,0 +1,45 @@
+function formatarTelefone(campo) {
+    let valor = campo.value.replace(/\D/g, '');
+    if (valor.length > 10) {
+        valor = valor.replace(/^(\d{2})(\d{5})(\d{4}).*/, '($1) $2-$3');
+    } else if (valor.length > 5) {
+        valor = valor.replace(/^(\d{2})(\d{4})(\d{0,4}).*/, '($1) $2-$3');
+    } else if (valor.length > 2) {
+        valor = valor.replace(/^(\d{2})(\d{0,5})/, '($1) $2');
+    } else if (valor.length > 0) {
+        valor = valor.replace(/^(\d{0,2})/, '($1');
+    }
+    campo.value = valor;
+}
+
+function formatarNotaFiscal(campo) {
+    let valor = campo.value.replace(/[^a-zA-Z0-9 ]/g, '');
+    valor = valor.replace(/(\d{3})(?=\d)/g, '$1.');
+    campo.value = valor.substring(0, 11);
+}
+
+function formatarCNPJ(campo) {
+    let valor = campo.value.replace(/\D/g, ''); 
+
+    if (valor.length > 12) {
+        valor = valor.replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2}).*/, '$1.$2.$3/$4-$5');
+    } else if (valor.length > 8) {
+        valor = valor.replace(/^(\d{2})(\d{3})(\d{3})(\d{4}).*/, '$1.$2.$3/$4');
+    } else if (valor.length > 5) {
+        valor = valor.replace(/^(\d{2})(\d{3})(\d{3}).*/, '$1.$2.$3');
+    } else if (valor.length > 2) {
+        valor = valor.replace(/^(\d{2})(\d{3}).*/, '$1.$2');
+    }
+
+    campo.value = valor;
+}
+
+function formatarCEP(campo) {
+    let valor = campo.value.replace(/\D/g, '');
+    if (valor.length > 5) {
+        valor = valor.replace(/^(\d{5})(\d{0,3}).*/, '$1-$2');
+    } else {
+        valor = valor.replace(/^(\d{0,5})/, '$1');
+    }
+    campo.value = valor;
+}
