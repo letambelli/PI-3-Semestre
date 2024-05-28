@@ -17,7 +17,7 @@
         <h1>Formulário de Agendamento</h1>
 
         <label class="label">Código: </label>
-        <input type="text" name="codigo" maxlength="15" required><br>
+        <input type="text" name="codigo" maxlength="6" required><br>
 
         <label class="label">Nota Fiscal: </label>
         <input type="text" name="notafiscal"  maxlength="20" oninput="formatarNotaFiscal(this)" required><br>
