@@ -1,17 +1,17 @@
 <?php
-include('protect.php');
+    include('protect.php');
 
-$strcon = mysqli_connect("localhost", "root", "", "sai") or die("Erro ao se conectar com o banco");
+    $strcon = mysqli_connect("localhost", "root", "", "sai") or die("Erro ao se conectar com o banco");
 
-$sql = "SELECT * FROM adm WHERE id = " . $_SESSION['id'];
-$result = mysqli_query($strcon, $sql);
+    $sql = "SELECT * FROM adm WHERE id = " . $_SESSION['id'];
+    $result = mysqli_query($strcon, $sql);
 
-if ($result) {
-    $row = mysqli_fetch_assoc($result);
-} else {
-    echo "Erro ao executar a consulta.";
-    exit;
-}
+    if ($result) {
+        $row = mysqli_fetch_assoc($result);
+    } else {
+        echo "Erro ao executar a consulta.";
+        exit;
+    }
 ?>
 
 <!DOCTYPE html>

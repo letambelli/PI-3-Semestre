@@ -1,5 +1,5 @@
 <?php
-    //4 colunas
+    include('protect.php');
 
     $nome = $_POST ['nome'];
     $email = $_POST ['email'];
