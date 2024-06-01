@@ -16,9 +16,6 @@
 
         <h1>Formulário de Agendamento</h1>
 
-        <label class="label">Código: </label>
-        <input type="text" name="codigo" maxlength="6" required><br>
-
         <label class="label">Nota Fiscal: </label>
         <input type="text" name="notafiscal"  maxlength="20" oninput="formatarNotaFiscal(this)" required><br>
         
@@ -81,6 +78,10 @@
                 <input type="datetime-local" name="hr_entrega" id="hr_entr" required>
             </div>
         </div>
+
+        <h3>Observações</h3>
+        <p>Obs:</p>
+        <textarea name="obs" id="obs" maxlength="300"></textarea><br>
         
         <div class="button-container">
             <button class="cancelar"><a href="painel.php">Cancelar</a></button>

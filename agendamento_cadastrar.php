@@ -1,7 +1,6 @@
 <?php
     include('protect.php');
     
-    $codigo = $_POST ['codigo'];
     $notafiscal = $_POST ['notafiscal'];
     $carga = $_POST ['carga'];
     $qtd_itens = $_POST ['qtd_itens'];
@@ -25,8 +24,10 @@
     $hr_coleta = $_POST ['hr_coleta'];
     $hr_entrega = $_POST ['hr_entrega'];
 
+    $obs = $_POST ['obs'];
+
     $strcon = mysqli_connect ("localhost", "root", "", "sai") or die ("Erro ao se conectar com o banco");
-    $sql = "INSERT INTO agendamento (codigo, notafiscal, carga, qtd_itens, peso, qtd_pallet, veiculo, placa, motorista, fornecedor, cnpj_for, cliente, cidade_ent, estado_ent, bairro_ent, rua_ent, numero_ent, cep_ent, hr_coleta, hr_entrega) VALUES ('".$codigo."' ,'".$notafiscal."' , '".$carga."' , '".$qtd_itens."' , '".$peso."' , '".$qtd_pallet."' , '".$veiculo."' , '".$placa."' , '".$motorista."' , '".$fornecedor."' ,  '".$cnpj_for."' ,'".$cliente."' , '".$cidade_ent."' ,  '".$estado_ent."' ,  '".$bairro_ent."' ,  '".$rua_ent."' ,  '".$numero_ent."' ,  '".$cep_ent."' ,'".$hr_coleta."' , '".$hr_entrega."');";
+    $sql = "INSERT INTO agendamento (notafiscal, carga, qtd_itens, peso, qtd_pallet, veiculo, placa, motorista, fornecedor, cnpj_for, cliente, cidade_ent, estado_ent, bairro_ent, rua_ent, numero_ent, cep_ent, hr_coleta, hr_entrega, obs) VALUES ('".$notafiscal."' , '".$carga."' , '".$qtd_itens."' , '".$peso."' , '".$qtd_pallet."' , '".$veiculo."' , '".$placa."' , '".$motorista."' , '".$fornecedor."' ,  '".$cnpj_for."' ,'".$cliente."' , '".$cidade_ent."' ,  '".$estado_ent."' ,  '".$bairro_ent."' ,  '".$rua_ent."' ,  '".$numero_ent."' ,  '".$cep_ent."' ,'".$hr_coleta."' , '".$hr_entrega."' ,'".$obs."');";
     mysqli_query ($strcon, $sql) or die ('Erro ao tentar cadastrar registro');
 ?>
 

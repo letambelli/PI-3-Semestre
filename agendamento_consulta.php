@@ -5,7 +5,7 @@
 
     if (!empty($_GET['search'])) {
         $data = mysqli_real_escape_string($strcon, $_GET['search']);
-        $sql = "SELECT * FROM agendamento WHERE id LIKE '%$data%' or codigo LIKE '%$data%' or notafiscal LIKE '%$data%'or fornecedor LIKE '%$data%' or cliente LIKE '%$data%' or cnpj_for LIKE '%$data%' or motorista LIKE '%$data%' or cidade_ent LIKE '%$data%' ORDER BY id DESC";
+        $sql = "SELECT * FROM agendamento WHERE id LIKE '%$data%' or obs LIKE '%$data%' or notafiscal LIKE '%$data%'or fornecedor LIKE '%$data%' or cliente LIKE '%$data%' or cnpj_for LIKE '%$data%' or motorista LIKE '%$data%' or cidade_ent LIKE '%$data%' ORDER BY id DESC";
     } else {
         $sql = "SELECT * FROM agendamento ORDER BY id DESC";
     }
@@ -32,7 +32,6 @@
             <thead>
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Código</th>
                     <th scope="col">Nota Fiscal</th>
                     <th scope="col">Carga</th>
                     <th scope="col">Quantia de Itens</th>
@@ -52,6 +51,7 @@
                     <th scope="col">CEP</th>
                     <th scope="col">Horário de Coleta</th>
                     <th scope="col">Horário de Entrega</th>
+                    <th scope="col">Observações</th>
                     <th scope="col"></th>
                     <th scope="col"></th>
     
@@ -62,7 +62,6 @@
                     while($user_data = mysqli_fetch_assoc($result)) {
                         echo "<tr>";
                         echo "<td>" . $user_data['id'] . "</td>";
-                        echo "<td>" . $user_data['codigo'] . "</td>";
                         echo "<td>" . $user_data['notafiscal'] . "</td>";
                         echo "<td>" . $user_data['carga'] . "</td>";
                         echo "<td>" . $user_data['qtd_itens'] . "</td>";
@@ -82,6 +81,7 @@
                         echo "<td>" . $user_data['cep_ent'] . "</td>";
                         echo "<td>" . $user_data['hr_coleta'] . "</td>";
                         echo "<td>" . $user_data['hr_entrega'] . "</td>";
+                        echo "<td>" . $user_data['obs'] . "</td>";
                         echo "<td><button class=\"alterar\"><a href=\"agendamento_edit.php?id=$user_data[id]\">Alterar</a></button></td>";
                         echo "<td><button class=\"excluir\"><a href=\"agendamento_excluir.php?id=$user_data[id]\">Excluir</a></button></td>";
                         

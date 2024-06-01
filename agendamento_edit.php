@@ -14,7 +14,6 @@
         if($result->num_rows > 0){
 
             while($user_data = mysqli_fetch_assoc($result)){
-                $codigo = $user_data ['codigo'];
                 $notafiscal = $user_data ['notafiscal'];
                 $carga = $user_data ['carga'];
                 $qtd_itens = $user_data ['qtd_itens'];
@@ -37,6 +36,8 @@
 
                 $hr_coleta = $user_data ['hr_coleta'];
                 $hr_entrega = $user_data ['hr_entrega'];
+
+                $obs = $user_data ['obs'];
 
             }
             
@@ -62,9 +63,6 @@
     <form name="agendamento" id="agendamento" onsubmit="return validarFormulario()" action="agendamento_save_edit.php" method="POST">
 
         <h1>Alterar Agendamento</h1>
-
-        <label class="label">Código: </label>
-        <input type="text" name="codigo" maxlength="6" value="<?php echo $codigo ?>" required><br>
 
         <label class="label">Nota Fiscal: </label>
         <input type="text" name="notafiscal" maxlength="20" value="<?php echo $notafiscal ?>" oninput="formatarNotaFiscal(this)" required><br>
@@ -127,6 +125,10 @@
                 <input type="datetime-local" name="hr_entrega" id="hr_entr" value="<?php echo $hr_entrega ?>" required>
             </div>
         </div>
+
+        <h3>Observações</h3>
+        <p>Obs:</p>
+        <textarea name="obs" id="obs" maxlength="300"></textarea><br>
         
         <div class="button-container">
             <button class="cancelar"><a href="agendamento_consulta.php">Cancelar</a></button>

@@ -5,7 +5,6 @@
 
     if(isset($_POST['update'])){
         $id = $_POST ['id'];
-        $codigo = $_POST ['codigo'];
         $notafiscal = $_POST ['notafiscal'];
         $carga = $_POST ['carga'];
         $qtd_itens = $_POST ['qtd_itens'];
@@ -29,7 +28,9 @@
         $hr_coleta = $_POST ['hr_coleta'];
         $hr_entrega = $_POST ['hr_entrega'];
 
-        $sqlUpdate = "UPDATE agendamento SET codigo='$codigo', notafiscal='$notafiscal', carga='$carga', qtd_itens='$qtd_itens', peso='$peso', qtd_pallet='$qtd_pallet', veiculo='$veiculo', placa='$placa', motorista='$motorista', fornecedor='$fornecedor', cnpj_for='$cnpj_for', cliente='$cliente', cidade_ent='$cidade_ent', estado_ent='$estado_ent', bairro_ent='$bairro_ent', rua_ent='$rua_ent', numero_ent='$numero_ent', cep_ent='$cep_ent', hr_coleta='$hr_coleta', hr_entrega='$hr_entrega' WHERE id='$id'";
+        $obs = $_POST ['obs'];
+
+        $sqlUpdate = "UPDATE agendamento SET notafiscal='$notafiscal', carga='$carga', qtd_itens='$qtd_itens', peso='$peso', qtd_pallet='$qtd_pallet', veiculo='$veiculo', placa='$placa', motorista='$motorista', fornecedor='$fornecedor', cnpj_for='$cnpj_for', cliente='$cliente', cidade_ent='$cidade_ent', estado_ent='$estado_ent', bairro_ent='$bairro_ent', rua_ent='$rua_ent', numero_ent='$numero_ent', cep_ent='$cep_ent', hr_coleta='$hr_coleta', hr_entrega='$hr_entrega', obs='$obs' WHERE id='$id'";
 
         $result = $strcon->query($sqlUpdate);
     }

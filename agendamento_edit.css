@@ -13,6 +13,10 @@ a {
     color: rgb(255, 255, 255);
   }
 
+p {
+    margin-left: 20px;
+}
+
 label {
     margin-left: 20px;
 }
@@ -61,6 +65,19 @@ select {
 .horarios {
     display: flex;
     gap: 5%;
+}
+
+#obs {
+    font-family: Arial, sans-serif;
+    width: 800px;
+    height: 200px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    resize: vertical;
 }
 
 .button-container {
