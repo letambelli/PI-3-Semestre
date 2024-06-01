@@ -26,7 +26,7 @@
             </div>
             <div class="form-group">
                
-                <label>Nome:</label>
+                <label>Nome Completo:</label>
                 <input type="text" id="nome" name="nome" maxlength="50" required>
             </div>
             <div class="form-group">
@@ -43,6 +43,11 @@
                 
                 <label>Senha:</label>
                 <input type="password" id="senha" name="senha" minlength="4" maxlength="30" required>
+            </div>
+            
+            <div class="inline-elements">
+            <input type="checkbox" required>
+            <p>Li e aceito os <a class="link" href="documentos/temos_de_uso_e_politica_de_privacidade.pdf">Termos de Uso e Política de Privacidade</a></p>
             </div>
 
             <div class="button-container">
