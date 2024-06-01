@@ -17,22 +17,22 @@
         <form action="adm_cadastrar.php" method="POST">
             <div class="form-group">
                 <label>Nome:</label>
-                <input type="text" id="nome" name="nome" required>
+                <input type="text" id="nome" name="nome" maxlength="50" required>
             </div>
             <div class="form-group">
 
                 <label>E-mail:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" maxlength="50" required>
             </div>
             <div class="form-group">
 
                 <label>Telefone:</label>
-                <input type="tel" id="telefone" name="telefone" oninput="formatarTelefone(this)" required>
+                <input type="tel" id="telefone" name="telefone" maxlength="20" oninput="formatarTelefone(this)" required>
             </div>
             <div class="form-group">
                 
                 <label>Senha:</label>
-                <input type="password" id="senha" name="senha" required>
+                <input type="password" id="senha" name="senha" minlength="4" maxlength="20" required>
             </div>
 
             <div class="button-container">

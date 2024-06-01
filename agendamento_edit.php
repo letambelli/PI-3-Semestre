@@ -56,6 +56,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alterar Agendamento</title>
     <link rel="stylesheet" href="agendamento_edit.css">
+    <script src="format.js"></script>
 </head>
 <body>
     <form name="agendamento" id="agendamento" onsubmit="return validarFormulario()" action="agendamento_save_edit.php" method="POST">
@@ -63,19 +64,22 @@
         <h1>Alterar Agendamento</h1>
 
         <label class="label">Código: </label>
-        <input type="text" name="codigo" value="<?php echo $codigo ?>" required><br>
+        <input type="text" name="codigo" maxlength="6" value="<?php echo $codigo ?>" required><br>
 
         <label class="label">Nota Fiscal: </label>
-        <input type="text" name="notafiscal" value="<?php echo $notafiscal ?>" required><br>
+        <input type="text" name="notafiscal" maxlength="20" value="<?php echo $notafiscal ?>" oninput="formatarNotaFiscal(this)" required><br>
 
         <label class="label">Carga: </label>
-        <input type="text" name="carga" value="<?php echo $carga ?>" required>
+        <input type="text" name="carga" maxlength="30" value="<?php echo $carga ?>" required>
+
         <label class="label">Quantia de Itens: </label>
-        <input type="number" name="qtd_itens" value="<?php echo $qtd_itens ?>" required>
+        <input type="number" name="qtd_itens" maxlength="5" value="<?php echo $qtd_itens ?>" required>
+
         <label class="label">Peso: </label>
-        <input type="number" name="peso" value="<?php echo $peso ?>" required>
+        <input type="number" name="peso" maxlength="10" value="<?php echo $peso ?>" required>
+
         <label class="label">Quantidade de Pallets: </label>
-        <input type="number" name="qtd_pallet" value="<?php echo $qtd_pallet ?>" required><br>
+        <input type="number" name="qtd_pallet" maxlength="5" value="<?php echo $qtd_pallet ?>" required><br>
 
         <label class="label">Veículo: </label>
         <select name="veiculo" value="<?php echo $veiculo ?>" required>
@@ -93,7 +97,7 @@
         <label class="label">Fornecedor: </label>
         <input type="text" name="fornecedor" value="<?php echo $fornecedor ?>" required><br>
         <label class="label">CNPJ: </label>
-        <input type="text" name="cnpj_for" value="<?php echo $cnpj_for ?>" required>
+        <input type="text" name="cnpj_for" value="<?php echo $cnpj_for ?>" oninput="formatarCNPJ(this)" required>
 
         <h3>Entrega</h3>
         <label class="label">Cliente: </label>
@@ -109,7 +113,7 @@
         <label class="label">Nº: </label>
         <input type="text" name="numero_ent" value="<?php echo $numero_ent ?>" required><br>
         <label class="label">CEP: </label>
-        <input type="text" name="cep_ent" value="<?php echo $cep_ent ?>" required><br><br>
+        <input type="text" name="cep_ent" value="<?php echo $cep_ent ?>" oninput="formatarCEP(this)" required><br><br>
         
         <h3>Horários</h3>
         <div class="horarios">

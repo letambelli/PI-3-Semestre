@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Parceiro</title>
     <link rel="stylesheet" href="parceiro.css">
+    <script src="format.js"></script>
 </head>
 <body>
     <div class="container">
@@ -16,32 +17,32 @@
             <div class="form-group">
                 
                 <label>Nome da Empresa:</label>
-                <input type="text" id="nome_empresa" name="nome_empresa" required>
+                <input type="text" id="nome_empresa" name="nome_empresa" maxlength="50" required>
             </div>
             <div class="form-group">
 
                 <label>CNPJ da Empresa:</label>
-                <input type="text" id="cnpj" name="cnpj" required>
+                <input type="text" id="cnpj" name="cnpj" maxlength="20" oninput="formatarCNPJ(this)" required>
             </div>
             <div class="form-group">
                
                 <label>Nome:</label>
-                <input type="text" id="nome" name="nome" required>
+                <input type="text" id="nome" name="nome" maxlength="50" required>
             </div>
             <div class="form-group">
 
                 <label>E-mail:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" maxlength="120" required>
             </div>
             <div class="form-group">
 
-                <label>Telefone</label>
-                <input type="tel" id="telefone" name="telefone" required>
+                <label>Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" maxlength="16" oninput="formatarTelefone(this)" required>
             </div>
             <div class="form-group">
                 
                 <label>Senha:</label>
-                <input type="password" id="senha" name="senha" required>
+                <input type="password" id="senha" name="senha" minlength="4" maxlength="30" required>
             </div>
 
             <div class="button-container">

@@ -21,6 +21,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Cadastro</title>
     <link rel="stylesheet" href="cadastro.css">
+    <script src="format.js"></script>
 </head>
 <body>
     <div class="container">
@@ -28,19 +29,19 @@
         <form action="proprioCadastroSaveEdit.php" method="POST">
             <div class="form-group">
                 <label>Nome:</label>
-                <input type="text" id="nome" name="nome" value="<?php echo htmlspecialchars($row['nome']); ?>" required>
+                <input type="text" id="nome" name="nome" maxlength="50" value="<?php echo htmlspecialchars($row['nome']); ?>" required>
             </div>
             <div class="form-group">
                 <label>E-mail:</label>
-                <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($row['email']); ?>" required>
+                <input type="email" id="email" name="email" maxlength="50" value="<?php echo htmlspecialchars($row['email']); ?>" required>
             </div>
             <div class="form-group">
                 <label>Telefone:</label>
-                <input type="tel" id="telefone" name="telefone" value="<?php echo htmlspecialchars($row['telefone']); ?>" required>
+                <input type="tel" id="telefone" name="telefone" maxlength="20" oninput="formatarTelefone(this)" value="<?php echo htmlspecialchars($row['telefone']); ?>" required>
             </div>
             <div class="form-group">
                 <label>Senha:</label>
-                <input type="password" id="senha" name="senha" value="<?php echo htmlspecialchars($row['senha']); ?>" required>
+                <input type="password" id="senha" name="senha" minlength="4" maxlength="20" value="<?php echo htmlspecialchars($row['senha']); ?>" required>
             </div>
 
             <div class="button-container">
