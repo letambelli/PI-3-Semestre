@@ -86,6 +86,7 @@ button[type="button"]:hover {
 
 .button-container {
     display: flex;
+    margin-top: 20px;
   }
   
 .button-container button {
