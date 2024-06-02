@@ -35,6 +35,7 @@
 
         <label class="label">Veículo: </label>
         <select name="veiculo" required>
+            <option value="a definir">A Definir</option>
             <option value="carreta">Carreta</option>
             <option value="truck">Truck</option>
             <option value="toco">Toco</option>
