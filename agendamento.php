@@ -15,9 +15,6 @@
     <form name="agendamento" id="agendamento" onsubmit="return validarFormulario()" action="agendamento_cadastrar.php" method="POST">
 
         <h1>Formulário de Agendamento</h1>
-
-        <label class="label">Nota Fiscal: </label>
-        <input type="text" name="notafiscal"  maxlength="20" oninput="formatarNotaFiscal(this)" required><br>
         
         <div>
             <label class="label">Carga: </label>

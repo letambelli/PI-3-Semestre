@@ -12,7 +12,7 @@
         $cnpj = $parceiro_data['cnpj'];
 
         $data = mysqli_real_escape_string($strcon, $_GET['search']);
-        $sql = "SELECT * FROM agendamento WHERE (fornecedor = '$nome_empresa' OR cliente = '$nome_empresa' OR cnpj_for = '$cnpj') AND (id LIKE '%$data%' OR obs LIKE '%$data%' OR notafiscal LIKE '%$data%' OR fornecedor LIKE '%$data%' OR cliente LIKE '%$data%' OR cnpj_for LIKE '%$data%' OR motorista LIKE '%$data%' OR cidade_ent LIKE '%$data%') ORDER BY id DESC";
+        $sql = "SELECT * FROM agendamento WHERE (fornecedor = '$nome_empresa' OR cliente = '$nome_empresa' OR cnpj_for = '$cnpj') AND (id LIKE '%$data%' OR obs LIKE '%$data%' OR carga LIKE '%$data%' OR fornecedor LIKE '%$data%' OR cliente LIKE '%$data%' OR cnpj_for LIKE '%$data%' OR motorista LIKE '%$data%' OR cidade_ent LIKE '%$data%') ORDER BY id DESC";
         $result_agendamento = $strcon->query($sql);
     } else {
         $parceiro_data = mysqli_fetch_assoc($result_parceiro);
@@ -46,7 +46,6 @@
             <thead>
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Nota Fiscal</th>
                     <th scope="col">Carga</th>
                     <th scope="col">Quantia de Itens</th>
                     <th scope="col">Peso</th>
@@ -73,8 +72,6 @@
                     while($user_data = mysqli_fetch_assoc($result_agendamento)) {
                         echo "<tr>";
                         echo "<td>" . $user_data['id'] . "</td>";
-                        
-                        echo "<td>" . $user_data['notafiscal'] . "</td>";
                         echo "<td>" . $user_data['carga'] . "</td>";
                         echo "<td>" . $user_data['qtd_itens'] . "</td>";
                         echo "<td>" . $user_data['peso'] . "</td>";

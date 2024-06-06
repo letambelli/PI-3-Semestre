@@ -12,12 +12,6 @@ function formatarTelefone(campo) {
     campo.value = valor;
 }
 
-function formatarNotaFiscal(campo) {
-    let valor = campo.value.replace(/[^a-zA-Z0-9 ]/g, '');
-    valor = valor.replace(/(\d{3})(?=\d)/g, '$1.');
-    campo.value = valor.substring(0, 11);
-}
-
 function formatarCNPJ(campo) {
     let valor = campo.value.replace(/\D/g, ''); 
 

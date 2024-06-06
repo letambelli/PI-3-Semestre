@@ -5,7 +5,7 @@
 
     if (!empty($_GET['search'])) {
         $data = mysqli_real_escape_string($strcon, $_GET['search']);
-        $sql = "SELECT * FROM agendamento WHERE id LIKE '%$data%' or obs LIKE '%$data%' or notafiscal LIKE '%$data%'or fornecedor LIKE '%$data%' or cliente LIKE '%$data%' or cnpj_for LIKE '%$data%' or motorista LIKE '%$data%' or cidade_ent LIKE '%$data%' ORDER BY id DESC";
+        $sql = "SELECT * FROM agendamento WHERE id LIKE '%$data%' or obs LIKE '%$data%' or carga LIKE '%$data%'or fornecedor LIKE '%$data%' or cliente LIKE '%$data%' or cnpj_for LIKE '%$data%' or motorista LIKE '%$data%' or cidade_ent LIKE '%$data%' ORDER BY id DESC";
     } else {
         $sql = "SELECT * FROM agendamento ORDER BY id DESC";
     }
@@ -32,7 +32,6 @@
             <thead>
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Nota Fiscal</th>
                     <th scope="col">Carga</th>
                     <th scope="col">Quantia de Itens</th>
                     <th scope="col">Peso</th>
@@ -62,7 +61,6 @@
                     while($user_data = mysqli_fetch_assoc($result)) {
                         echo "<tr>";
                         echo "<td>" . $user_data['id'] . "</td>";
-                        echo "<td>" . $user_data['notafiscal'] . "</td>";
                         echo "<td>" . $user_data['carga'] . "</td>";
                         echo "<td>" . $user_data['qtd_itens'] . "</td>";
                         echo "<td>" . $user_data['peso'] . "</td>";

@@ -14,7 +14,6 @@
         if($result->num_rows > 0){
 
             while($user_data = mysqli_fetch_assoc($result)){
-                $notafiscal = $user_data ['notafiscal'];
                 $carga = $user_data ['carga'];
                 $qtd_itens = $user_data ['qtd_itens'];
                 $peso = $user_data ['peso'];
@@ -63,9 +62,6 @@
     <form name="agendamento" id="agendamento" onsubmit="return validarFormulario()" action="agendamento_save_edit.php" method="POST">
 
         <h1>Alterar Agendamento</h1>
-
-        <label class="label">Nota Fiscal: </label>
-        <input type="text" name="notafiscal" maxlength="20" value="<?php echo $notafiscal ?>" oninput="formatarNotaFiscal(this)" required><br>
 
         <label class="label">Carga: </label>
         <input type="text" name="carga" maxlength="30" value="<?php echo $carga ?>" required>
