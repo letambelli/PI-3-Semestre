@@ -5,6 +5,7 @@
 }
 
 body {
+    font-family: Arial, sans-serif;
     background-color: #f2f4f5;
   }
 
@@ -48,20 +49,25 @@ body {
     background-color: darkblue;
 }
 
-.main_texto {
-    margin-top: 5%;
-    text-align: center;
+.conteudo_principal {
+    display: flex;
 }
 
-.main_texto h1 {
-    font-family:'Trebuchet MS';
-    font-size: 50px;
-    color: rgb(36, 99, 193);
-    margin-bottom: 20px;
+.conteudo_principal_texto {
+    margin: 3%;
 }
 
-.main_texto h2 {
-    color: black;
+.conteudo_principal_texto h1 {
+    margin-bottom: 10px;
+}
+
+.conteudo_principal_img img{
+    width: 700px;
+    height: 500px;
+}
+
+.conteudo_principal_img {
+    margin: 3%;
 }
 
 .rodape {

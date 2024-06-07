@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LogiPlanner</title>
-    <link rel="stylesheet" href="loginEscolha.css">
+    <title>Início</title>
+    <link rel="stylesheet" href="sobre.css">
 </head>
 <body>
-
     <header class="cabecalho">
         <nav class="cabecalho_menu">
             <a class="cabecalho_menu_logo" href="index.php">LogiPlanner</a>
@@ -18,13 +17,21 @@
     </header>
 
     <main>
-    <div class="index-container">
-        <h1>Faça Login</h1>
-        <div class="button-container">
-            <button><a href="login_adm.php">ADM</a></button><br><br>
-            <button><a href="login_parc.php">Parceiro</a></button>
+    <main>
+        <div class="conteudo_principal">
+            <div class="conteudo_principal_texto">
+            <h1>Sobre Nós</h1>
+            <p>O LogiPlanner é o sistema de agendamento desenvolvido pela Virtuality Systems para a DirectRoute Transport, projetado para otimizar processos logísticos de grandes fornecedores no atendimento a múltiplos clientes. Com suas funcionalidades, o LogiPlanner melhora a eficiência operacional e garante a satisfação de todos os envolvidos.<p>
+            </div>
+
+            <div class="conteudo_principal_img">
+                <img src="imagens/caminhao.jpg" alt="">
+            </div>
+            
+
         </div>
-    </div>
+    </main>
+
     </main>
 
     <footer class="rodape">

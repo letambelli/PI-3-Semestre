@@ -1,25 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f2f4f5;
     color: rgb(36, 99, 193);
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
   }
   
-h1 {
-    text-align: center;
-    margin-bottom: 50px;
-  }
+.cabecalho {
+    background-color: rgb(36, 99, 193);
+    padding: 0% 0% 0% 3%;
+}
 
-a {
+.cabecalho_menu {
+    display: flex;
+    align-items: baseline;
+}
+
+.cabecalho_menu_logo {
+    font-family:'Trebuchet MS';
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
     text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 18px;
-  }
+    margin-right: 2%;
+}
+
+.cabecalho_menu_link {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 1%;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.cabecalho_menu_link:last-child {
+    align-items: end; 
+    margin-left: 65%;
+}
+
+.cabecalho_menu_link:hover {
+    background-color: darkblue;
+}
   
 .index-container {
     background-color: white;
@@ -28,6 +57,20 @@ a {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     padding: 20px;
     width: 300px;
+    margin-left: 40%;
+    margin-top: 10%;
+  }
+
+.index-container h1 {
+    color: rgb(36, 99, 193);
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .index-container a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
   }
 
 .index-container button{
@@ -43,6 +86,18 @@ a {
 .index-container button:hover {
     background-color: darkblue;
   }
-  
-  
-  
+
+  .rodape {
+    color: black;
+    background-color: white;
+    padding: 24px;
+    position: absolute;
+    display: inline-flex;
+    bottom: 0%;
+    width: 100%;
+    gap: 100px;
+}
+
+.rodape p {
+    margin-left: 100px;
+} 
