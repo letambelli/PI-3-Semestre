@@ -21,8 +21,8 @@
     <div class="index-container">
         <h1>Faça Login</h1>
         <div class="button-container">
-            <button><a href="login_adm.php">ADM</a></button><br><br>
-            <button><a href="login_parc.php">Parceiro</a></button>
+            <a class="btn" href="login_adm.php">ADM</a>
+            <a class="btn" href="login_parc.php">Parceiro</a>
         </div>
     </div>
     </main>
