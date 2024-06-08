@@ -54,22 +54,26 @@ a {
   background-color: #2E8B57;
 }
 
-.login-container button[type="button"] {
-  width: 50%;
+.login-container a {
+  text-align: center;
+  font-size: 14px;
+  width: 40%;
   padding: 10px;
   border: none;
   border-radius: 4px;
   background-color: #FF6347;
   color: #ffffff;
   cursor: pointer;
+  margin-left: 10px;
 }
 
-.login-container button[type="button"]:hover {
+.login-container a:hover {
   background-color: #8B0000;
 }
 
 .button-container {
   display: flex;
+  gap: 10px;
 }
 
 .button-container button {

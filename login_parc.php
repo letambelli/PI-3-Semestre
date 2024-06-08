@@ -21,7 +21,7 @@
         </p>
 
         <div class="button-container">
-            <button type="button"><a href="loginEscolha.php">Voltar</a></button>
+            <a class="btn" href="loginEscolha.php">Voltar</a>
             <button type="submit" value="continue">Entrar</button><br><br>
         </div>
 
