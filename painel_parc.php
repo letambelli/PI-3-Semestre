@@ -10,12 +10,26 @@
     <link rel="stylesheet" href="painel_parc.css">
 </head>
 <body>
-    <div class="painel-container">
-        <h2>Bem Vindo(a), <?php echo $_SESSION['nome'];?>!</h2>
-        <button><a href="agendamento_consulta_parc.php">Consultar Agendamentos</a></button>
-        <button><a href="cadastro_parc.php">Meus Dados</a></button>
-        <button class="sair"><a href="logout.php">Sair</a></button>
+    <header class="cabecalho">
+        <nav class="cabecalho_menu">
+            <a class="cabecalho_menu_logo" href="painel_parc.php">LogiPlanner</a>
+            <a class="cabecalho_menu_link" href="logout.php">Sair</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="painel">
+            <div class="painel-msg">
+                <h2>Bem Vindo(a), <?php echo $_SESSION['nome'];?>!</h2><br>
+                <h1>Início</h1>
+            </div>
+
+            <div class="painel-container">
+                <a href="agendamento_consulta_parc.php">Consultar Agendamentos</a></button>
+                <a href="cadastro_parc.php">Meus Dados</a>
         </div>
+        </div>
+    </main>
 
 </body>
 </html>
