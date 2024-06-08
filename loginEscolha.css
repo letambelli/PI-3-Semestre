@@ -89,10 +89,10 @@ body {
     background-color: darkblue;
   }
 
-.rodape {
-  font-family: 'Times New Roman', Times, serif;
+  .rodape {
+    font-family: 'Times New Roman', Times, serif;
     color: black;
-    background-color: white;
+    background-color: rgb(75, 160, 213);
     padding: 24px;
     position: absolute;
     display: inline-flex;
@@ -102,5 +102,6 @@ body {
 }
 
 .rodape p {
+    color: white;
     margin-left: 100px;
 } 

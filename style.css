@@ -5,7 +5,9 @@
 }
 
 body {
-    background-color: #f2f4f5;
+    background-image: url(imagens/transito.jpg);
+    background-size: cover;
+    background-position: center;
   }
 
 .cabecalho {
@@ -49,25 +51,31 @@ body {
 }
 
 .main_texto {
-    margin-top: 5%;
+    background-color: rgba(16, 109, 249, 0.756);
+    width: 25%;
+    padding: 50px;
+    margin-top: 10%;
+    margin-left: 38%;
     text-align: center;
+    border-radius: 15px;
 }
 
 .main_texto h1 {
     font-family:'Trebuchet MS';
     font-size: 50px;
-    color: rgb(36, 99, 193);
+    color: rgb(126, 255, 244);
     margin-bottom: 20px;
 }
 
 .main_texto h2 {
-    color: black;
+    color: white;
+    font-size: 30px;
 }
 
 .rodape {
     font-family: 'Times New Roman', Times, serif;
     color: black;
-    background-color: white;
+    background-color: rgb(75, 160, 213);
     padding: 24px;
     position: absolute;
     display: inline-flex;
@@ -77,5 +85,6 @@ body {
 }
 
 .rodape p {
+    color: white;
     margin-left: 100px;
 }
