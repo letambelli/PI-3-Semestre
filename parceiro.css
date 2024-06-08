@@ -7,11 +7,6 @@ body {
     margin-top: 100px;
 }
 
-a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-  }
-
 .link {
     color: blue;
     text-decoration: dashed;
@@ -60,7 +55,7 @@ button {
     padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
-    font-size: 18;
+    font-size: 16;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -70,23 +65,27 @@ button:hover {
     background-color: #0056b3;
 }
 
-button[type="button"] {
-    width: 50%;
+.button-container a {
+    text-decoration: none;
+    color: white;
+    width: 45%;
     padding: 10px 20px;
     background-color: red;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    text-align: center;
 }
 
-button[type="button"]:hover {
+.button-container a :hover {
     background-color: darkred;
 }
 
 .button-container {
     display: flex;
     margin-top: 20px;
+    gap: 20px;
   }
   
 .button-container button {

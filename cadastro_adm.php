@@ -49,8 +49,8 @@
             </div>
 
             <div class="button-container">
-                <button type="button"><a href="config_adm.php">Voltar</a></button>
-                <?php echo "<button class=\"alterar\"><a href=\"editProprioCadastro.php?id=$_SESSION[id]\">Alterar Dados</a></button>"?>
+                <a href="config_adm.php">Voltar</a>
+                <?php echo "<a id=\"alterar\" href=\"editProprioCadastro.php?id=$_SESSION[id]\">Alterar Dados</a>"?>
             </div>
         </form>
     </div>

@@ -41,7 +41,7 @@
             </div>
 
             <div class="button-container">
-                <button type="button"><a href="config_adm.php">Cancelar</a></button>
+                <a href="config_adm.php">Cancelar</a>
                 <button type="submit">Enviar</button>
             </div>
         </form>

@@ -45,7 +45,7 @@
             </div>
 
             <div class="button-container">
-                <button type="button"><a href="cadastro_adm.php">Cancelar</a></button>
+                <a href="cadastro_adm.php">Cancelar</a>
                 <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
                 <input type="submit" name="update" value="Salvar" id="update">
             </div>
