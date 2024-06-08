@@ -62,7 +62,7 @@
             </div>
 
             <div class="button-container">
-                <button type="button"><a href="painel_parc.php">Voltar</a></button>
+                <a href="painel_parc.php">Voltar</a>
             </div>
         </form>
     </div>

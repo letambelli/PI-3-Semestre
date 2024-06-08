@@ -96,7 +96,8 @@
                 ?>
             </tbody>
         </table>
-        <button class="voltar"><a href="painel_parc.php">Voltar</a></button>
+        <br>
+        <a class="voltar" href="painel_parc.php">Voltar</a>
     </div> 
 </body>
 <script>
