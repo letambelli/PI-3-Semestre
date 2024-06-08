@@ -80,14 +80,15 @@
                         echo "<td>" . $user_data['hr_coleta'] . "</td>";
                         echo "<td>" . $user_data['hr_entrega'] . "</td>";
                         echo "<td>" . $user_data['obs'] . "</td>";
-                        echo "<td><button class=\"alterar\"><a href=\"agendamento_edit.php?id=$user_data[id]\">Alterar</a></button></td>";
-                        echo "<td><button class=\"excluir\"><a href=\"agendamento_excluir.php?id=$user_data[id]\">Excluir</a></button></td>";
+                        echo "<td><a class=\"alterar\" href=\"agendamento_edit.php?id=$user_data[id]\">Alterar</a></td>";
+                        echo "<td><a class=\"excluir\" href=\"agendamento_excluir.php?id=$user_data[id]\">Excluir</a></td>";
                         
                     }
                 ?>
             </tbody>
         </table>
-        <button class="voltar"><a href="painel.php">Voltar</a></button>
+        <br>
+        <a class="voltar" href="painel.php">Voltar</a>
     </div> 
 </body>
     <script>

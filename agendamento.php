@@ -82,7 +82,7 @@
         <textarea name="obs" id="obs" maxlength="300"></textarea><br>
         
         <div class="button-container">
-            <button class="cancelar"><a href="painel.php">Cancelar</a></button>
+            <a class="cancelar" href="painel.php">Cancelar</a>
             <input class="limpar" type="reset" value="Limpar">
             <input type="submit" name="enviar" value="Enviar">
         </div>

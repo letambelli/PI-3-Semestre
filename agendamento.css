@@ -11,7 +11,7 @@ body {
 a {
     text-decoration: none;
     color: rgb(255, 255, 255);
-  }
+}
 
 p {
     margin-left: 20px;
@@ -59,7 +59,6 @@ select {
     padding: 8px;
     border-radius: 10px;
     margin-bottom: 15%;
-
 }
 
 .horarios {
@@ -81,52 +80,46 @@ select {
 }
 
 .button-container {
-    display: inline;
-    gap: 50px;
-    margin-left: 150px;
-  }
+    display: flex; 
+    gap: 20px; 
+    justify-content: center;
+}
 
 input[type="submit"],
-button {
-    width: 20%;
+button,
+input[type="reset"],
+a.cancelar {
+    font-size: 16px;
+    width: 250px;
     padding: 10px 20px;
     margin-top: 10px;
-    background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-align: center;
+    display: inline-block; /* Para âncoras se comportarem como botões */
 }
 
-input[type="submit"]:hover,
-button:hover {
+input[type="submit"] {
+    background-color: #007bff;
+}
+
+input[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-.cancelar {
-    margin-left: 2%;
-    width: 20%;
-    padding: 10px 20px;
+a.cancelar {
     background-color: red;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
-.cancelar:hover {
+a.cancelar:hover {
     background-color: darkred;
 }
 
 input[type="reset"].limpar {
-    width: 20%;
-    padding: 10px 20px;
     background-color: rgb(199, 199, 36);
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
 input[type="reset"].limpar:hover {
