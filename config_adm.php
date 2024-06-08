@@ -10,13 +10,25 @@
 </head>
 <body>
 
-    <div class="config-container">
-        <h1>Configurações</h1>
-        <button><a href="cadastro_adm.php">Meu Cadastro</a></button>
-        <button><a href="parceiro.php">Cadastrar Parceiro</a></button>
-        <button><a href="adm.php">Cadastrar ADM</a></button>
-        <button id="voltar"><a href="painel.php">Voltar</a></button>
-    </div>
+    <header class="cabecalho">
+        <nav class="cabecalho_menu">
+            <a class="cabecalho_menu_logo" href="painel.php">LogiPlanner</a>
+            <a class="cabecalho_menu_link" href="logout.php">Sair</a>
+        </nav>
+    </header>
 
+    <main>
+
+        <div class="config-container-text">
+            <h1>Cadastros</h1>
+        </div>
+        <div class="config-container">
+            
+            <a href="cadastro_adm.php">Meu Cadastro</a>
+            <a href="parceiro.php">Cadastrar Parceiro</a>
+            <a href="adm.php">Cadastrar ADM</a>
+        </div>
+    </main>
+    
 </body>
 </html>

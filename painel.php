@@ -10,13 +10,28 @@
     <link rel="stylesheet" href="painel.css">
 </head>
 <body>
-    <div class="painel-container">    
-        <h2>Bem Vindo(a), <?php echo $_SESSION['nome'];?>!</h2>
-        <button><a href="agendamento_consulta.php">Consultar Agendamentos</a></button>
-        <button><a href="agendamento.php">Realizar Agendamento</a></button>
-        <button><a href="config_adm.php">Configurações</a></button>
-        <button class="sair"><a href="logout.php">Sair</a></button>
+
+    <header class="cabecalho">
+        <nav class="cabecalho_menu">
+            <a class="cabecalho_menu_logo" href="painel.php">LogiPlanner</a>
+            <a class="cabecalho_menu_link" href="logout.php">Sair</a>
+        </nav>
+    </header>
+
+    <main>
+    <div class="painel">
+    <div class="painel-msg">
+        <h2>Bem Vindo(a), <?php echo $_SESSION['nome'];?>!</h2><br>
+        <h1>Início</h1>
     </div>
+
+    <div class="painel-container">
+        <a href="agendamento_consulta.php">Consultar Agendamentos</a>
+        <a href="agendamento.php">Realizar Agendamento</a>
+        <a href="config_adm.php">Cadastros</a>
+    </div>
+    </div>
+    </main>
 
 </body>
 </html>

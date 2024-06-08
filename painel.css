@@ -1,78 +1,86 @@
-body {
-  background-color: #f2f4f5;
-  font-family: Arial, sans-serif;
-  color: rgba(32, 32, 32, 0.8);
+* {
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  box-sizing: border-box;
 }
 
-h2 {
-  color: rgba(32, 32, 32, 0.8);
-  margin-bottom: 40px;
-}
-
-a {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-}
-
-.painel-container {
-  width: 100%; 
-  max-width: 600px; 
-  margin: 200px auto;
-  background-color: white;
-  border: 2px rgb(88, 88, 88);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 50px;
-  text-align: center;
-  border-radius: 10px;
-  border: 2px rgb(88, 88, 88);
-}
-
-h2 {
-  display: inline-block; 
-  margin: 0;
-  margin-bottom: 30px;
-  justify-content: center;
-}
-
-a {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  font-size: 16px;
-}
-
-button {
-  width: 80%;
-  margin-top: 20px;
-  padding: 10px;
+.cabecalho {
   background-color: rgb(36, 99, 193);
-  border: none;
-  border-radius: 15px;
-  transition: background-color 0.3s;
+  padding: 0% 0% 0% 3%;
 }
 
-button:hover {
-  background-color: darkblue;
+.cabecalho_menu {
+  display: flex;
+  align-items: baseline;
+}
+
+.cabecalho_menu_logo {
+  font-family:'Trebuchet MS';
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  margin-right: 2%;
+}
+
+.cabecalho_menu_link {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 1%;
+  transition: background-color 0.3s;
   cursor: pointer;
 }
 
-button a {
-  text-decoration: none;
-  color: white;
-  font-size: 18px;
+.cabecalho_menu_link:last-child {
+  align-items: end; 
+  margin-left: 65%;
 }
 
-button.sair {
-  background-color: red;
-  color: white;
-}
-
-button.sair:hover{
+.cabecalho_menu_link:hover {
   background-color: darkred;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f4f5;
+}
+
+.painel-msg {
+  color: rgba(32, 32, 32, 0.8);
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 160px;
+}
+
+.painel-container {
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.painel-container a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 100px;
   color: white;
+  text-decoration: none;
+  font-size: 20px;
+  background-color: rgb(36, 99, 193);
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  text-align: center;
+  margin-bottom: 200px;
+}
+
+.painel-container a:hover {
+  background-color: darkblue;
+  cursor: pointer;
 }
